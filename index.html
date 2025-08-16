@@ -15,38 +15,37 @@
     .brand { font-weight: 700; letter-spacing: 0.4px; }
     .footnote { font-size: 0.6em; opacity: 0.8; }
     .pill { display:inline-block; padding: .25em .6em; border-radius: 9999px; background:#111827; color:#fff; font-size:.55em; }
+    svg { max-width: 600px; }
   </style>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
-      <!-- Title with animated fragments -->
+      <!-- Title -->
       <section>
         <h2 class="brand fragment fade-in-then-semi-out">Q2 FY2025 Quarterly Earnings</h2>
         <p class="fragment fade-in-then-out">Interactive Report for Stakeholders</p>
         <p class="fragment fade-in-then-semi-out"><span class="pill">Technical Consultant</span></p>
         <p class="fragment highlight-red">Email: <strong>24ds3000105@ds.study.iitm.ac.in</strong></p>
         <aside class="notes">
-          Welcome the audience, mention that this deck is built with RevealJS and will be shared via GitHub Pages. Use left/right arrows to navigate; press <kbd>s</kbd> for speaker view.
+          Welcome the audience, mention that this deck is built with RevealJS and will be shared via GitHub Pages.
         </aside>
       </section>
 
-      <!-- Agenda with fragments (animated elements) -->
+      <!-- Agenda -->
       <section>
         <h3>Agenda</h3>
         <ol>
           <li class="fragment fade-in">Headline Financials</li>
           <li class="fragment fade-in">Revenue & Margin Drivers</li>
           <li class="fragment fade-in">Outlook & Guidance</li>
+          <li class="fragment fade-in">Interactive Chart</li>
           <li class="fragment fade-in">Q&A</li>
         </ol>
-        <aside class="notes">
-          Reveal each agenda item using fragments to pace the talk. Keep this slide to ~30 seconds.
-        </aside>
       </section>
 
-      <!-- Markdown slide with fragments -->
+      <!-- Markdown -->
       <section data-markdown>
         <textarea data-template>
 ### Headline Financials (Markdown)
@@ -56,8 +55,6 @@
 - **EPS (Diluted):** $1.42 <!-- .element: class="fragment fade-in" -->
 - **Free Cash Flow:** $620M <!-- .element: class="fragment fade-in" -->
 
-> Markdown lets us write content quickly while keeping slides clean. <!-- .element: class="fragment fade-in" -->
-
 | Metric | Value | Trend |
 |---|---:|:---|
 | ARR | $9.8B | ↗ steady |
@@ -66,12 +63,9 @@
 
 Email for queries: **24ds3000105@ds.study.iitm.ac.in**
         </textarea>
-        <aside class="notes">
-          Point out that this slide is authored in Markdown. The table shows sticky metrics relevant for investors.
-        </aside>
       </section>
 
-      <!-- Code sample with syntax highlighting and animation -->
+      <!-- Code sample -->
       <section>
         <h3 class="fragment fade-in">Programmatic KPI Check (Code Sample)</h3>
         <pre class="fragment fade-in"><code class="language-python">from decimal import Decimal
@@ -81,38 +75,25 @@ def gross_margin(revenue, cogs):
     return (revenue - cogs) / revenue
 
 print(round(gross_margin('3200000000', '2320000000') * 100, 2))  # 27.5%</code></pre>
-        <p class="fragment fade-in">Email for queries: <strong>24ds3000105@ds.study.iitm.ac.in</strong></p>
-        <aside class="notes">
-          Highlight that we can embed code with syntax highlighting to show reproducible analytics.
-        </aside>
       </section>
 
-      <!-- Financial math (KaTeX/MathJax) with animations -->
+      <!-- Financial formulas -->
       <section>
         <h3>Financial Formulas</h3>
         <p class="fragment fade-in">Net Present Value (NPV):</p>
         <p class="fragment fade-up">\[ \mathrm{NPV} = \sum_{t=1}^{T} \frac{CF_t}{(1+r)^t} - C_0 \]</p>
         <p class="fragment fade-in">Capital Asset Pricing Model (CAPM):</p>
         <p class="fragment fade-up">\[ \mathbb{E}[R_i] = R_f + \beta_i (\mathbb{E}[R_m]-R_f) \]</p>
-        <aside class="notes">
-          Briefly remind the audience how discount rates and beta feed valuation and hurdle analysis.
-        </aside>
       </section>
 
-      <!-- Fragments progression example -->
+      <!-- Interactive chart (D3.js) -->
       <section>
-        <h3>Key Drivers</h3>
-        <ul>
-          <li class="fragment fade-up">Payments volume growth in APAC</li>
-          <li class="fragment fade-left">Expense discipline in cloud spend</li>
-          <li class="fragment fade-right">Mix shift to higher-margin services</li>
-        </ul>
-        <aside class="notes">
-          Land each driver with a short example; keep each beat &lt;10s.
-        </aside>
+        <h3>Interactive Revenue Growth</h3>
+        <div id="chart"></div>
+        <aside class="notes">Demo of embedding D3.js charts.</aside>
       </section>
 
-      <!-- Speaker notes demo on a detail slide -->
+      <!-- Guidance -->
       <section>
         <h3>Guidance (Q3 FY2025)</h3>
         <ul>
@@ -122,19 +103,13 @@ print(round(gross_margin('3200000000', '2320000000') * 100, 2))  # 27.5%</code><
         </ul>
         <p class="footnote fragment fade-in">(Internal model updated Aug 17, 2025)</p>
         <p class="fragment fade-in">Email: <strong>24ds3000105@ds.study.iitm.ac.in</strong></p>
-        <aside class="notes">
-          De-risk by flagging macro sensitivities (rates, FX). Emphasize disciplined capital allocation.
-        </aside>
       </section>
 
       <!-- Closing -->
       <section>
         <h2 class="fragment fade-in-then-out">Thank You</h2>
-        <p class="fragment fade-in-then-semi-out">Slides built with <strong>RevealJS</strong> and published via <strong>GitHub Pages</strong>.</p>
+        <p class="fragment fade-in-then-semi-out">Slides built with <strong>RevealJS</strong>, interactive D3.js, and published via <strong>GitHub Pages</strong>.</p>
         <p class="fragment highlight-green">Contact: <strong>24ds3000105@ds.study.iitm.ac.in</strong></p>
-        <aside class="notes">
-          Invite questions; point to the repo README for data notes.
-        </aside>
       </section>
 
     </div>
@@ -147,6 +122,8 @@ print(round(gross_margin('3200000000', '2320000000') * 100, 2))  # 27.5%</code><
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
+  <!-- D3.js -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
 
   <script>
     Reveal.initialize({
@@ -154,13 +131,31 @@ print(round(gross_margin('3200000000', '2320000000') * 100, 2))  # 27.5%</code><
       slideNumber: 'c/t',
       transition: 'slide',
       plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ],
-      // Math configuration (KaTeX)
       math: {
-        mathjax: null,
         katexScript: 'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js',
         katexStylesheet: 'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css'
       }
     });
+
+    // Simple D3 bar chart
+    const data = [3.0, 3.2, 3.4, 3.6];
+    const width = 400, height = 250;
+    const svg = d3.select("#chart").append("svg")
+      .attr("width", width).attr("height", height);
+    const x = d3.scaleBand().domain(data.map((d,i)=>`Q${i+1}`)).range([0,width]).padding(0.3);
+    const y = d3.scaleLinear().domain([0,d3.max(data)]).range([height,0]);
+
+    svg.selectAll("rect")
+      .data(data)
+      .enter().append("rect")
+      .attr("x", (d,i)=>x(`Q${i+1}`))
+      .attr("y", d=>y(d))
+      .attr("width", x.bandwidth())
+      .attr("height", d=>height - y(d))
+      .attr("fill", "#1f77b4");
+
+    svg.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x));
+    svg.append("g").call(d3.axisLeft(y));
   </script>
 </body>
 </html>
