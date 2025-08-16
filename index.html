@@ -21,12 +21,12 @@
   <div class="reveal">
     <div class="slides">
 
-      <!-- Title -->
+      <!-- Title with animated fragments -->
       <section>
-        <h2 class="brand fragment fade-in">Q2 FY2025 Quarterly Earnings</h2>
-        <p class="fragment fade-in">Interactive Report for Stakeholders</p>
-        <p class="fragment fade-in"><span class="pill">Technical Consultant</span></p>
-        <p class="fragment fade-in">Email: <strong>24ds3000105@ds.study.iitm.ac.in</strong></p>
+        <h2 class="brand fragment fade-in-then-semi-out">Q2 FY2025 Quarterly Earnings</h2>
+        <p class="fragment fade-in-then-out">Interactive Report for Stakeholders</p>
+        <p class="fragment fade-in-then-semi-out"><span class="pill">Technical Consultant</span></p>
+        <p class="fragment highlight-red">Email: <strong>24ds3000105@ds.study.iitm.ac.in</strong></p>
         <aside class="notes">
           Welcome the audience, mention that this deck is built with RevealJS and will be shared via GitHub Pages. Use left/right arrows to navigate; press <kbd>s</kbd> for speaker view.
         </aside>
@@ -46,17 +46,17 @@
         </aside>
       </section>
 
-      <!-- Markdown slide -->
+      <!-- Markdown slide with fragments -->
       <section data-markdown>
         <textarea data-template>
 ### Headline Financials (Markdown)
 
-- **Revenue:** $3.2B *(+8% YoY)* {.fragment}
-- **Operating Margin:** 27.4% {.fragment}
-- **EPS (Diluted):** $1.42 {.fragment}
-- **Free Cash Flow:** $620M {.fragment}
+- **Revenue:** $3.2B *(+8% YoY)* <!-- .element: class="fragment fade-in" -->
+- **Operating Margin:** 27.4% <!-- .element: class="fragment fade-in" -->
+- **EPS (Diluted):** $1.42 <!-- .element: class="fragment fade-in" -->
+- **Free Cash Flow:** $620M <!-- .element: class="fragment fade-in" -->
 
-> Markdown lets us write content quickly while keeping slides clean. {.fragment}
+> Markdown lets us write content quickly while keeping slides clean. <!-- .element: class="fragment fade-in" -->
 
 | Metric | Value | Trend |
 |---|---:|:---|
@@ -71,10 +71,10 @@ Email for queries: **24ds3000105@ds.study.iitm.ac.in**
         </aside>
       </section>
 
-      <!-- Code sample with syntax highlighting -->
+      <!-- Code sample with syntax highlighting and animation -->
       <section>
-        <h3>Programmatic KPI Check (Code Sample)</h3>
-        <pre><code class="language-python">from decimal import Decimal
+        <h3 class="fragment fade-in">Programmatic KPI Check (Code Sample)</h3>
+        <pre class="fragment fade-in"><code class="language-python">from decimal import Decimal
 
 def gross_margin(revenue, cogs):
     revenue, cogs = Decimal(revenue), Decimal(cogs)
@@ -87,13 +87,13 @@ print(round(gross_margin('3200000000', '2320000000') * 100, 2))  # 27.5%</code><
         </aside>
       </section>
 
-      <!-- Financial math (KaTeX/MathJax) -->
+      <!-- Financial math (KaTeX/MathJax) with animations -->
       <section>
         <h3>Financial Formulas</h3>
         <p class="fragment fade-in">Net Present Value (NPV):</p>
-        <p class="fragment fade-in">\[ \mathrm{NPV} = \sum_{t=1}^{T} \frac{CF_t}{(1+r)^t} - C_0 \]</p>
+        <p class="fragment fade-up">\[ \mathrm{NPV} = \sum_{t=1}^{T} \frac{CF_t}{(1+r)^t} - C_0 \]</p>
         <p class="fragment fade-in">Capital Asset Pricing Model (CAPM):</p>
-        <p class="fragment fade-in">\[ \mathbb{E}[R_i] = R_f + \beta_i (\mathbb{E}[R_m]-R_f) \]</p>
+        <p class="fragment fade-up">\[ \mathbb{E}[R_i] = R_f + \beta_i (\mathbb{E}[R_m]-R_f) \]</p>
         <aside class="notes">
           Briefly remind the audience how discount rates and beta feed valuation and hurdle analysis.
         </aside>
@@ -104,8 +104,8 @@ print(round(gross_margin('3200000000', '2320000000') * 100, 2))  # 27.5%</code><
         <h3>Key Drivers</h3>
         <ul>
           <li class="fragment fade-up">Payments volume growth in APAC</li>
-          <li class="fragment fade-up">Expense discipline in cloud spend</li>
-          <li class="fragment fade-up">Mix shift to higher-margin services</li>
+          <li class="fragment fade-left">Expense discipline in cloud spend</li>
+          <li class="fragment fade-right">Mix shift to higher-margin services</li>
         </ul>
         <aside class="notes">
           Land each driver with a short example; keep each beat &lt;10s.
@@ -129,9 +129,9 @@ print(round(gross_margin('3200000000', '2320000000') * 100, 2))  # 27.5%</code><
 
       <!-- Closing -->
       <section>
-        <h2 class="fragment fade-in">Thank You</h2>
-        <p class="fragment fade-in">Slides built with <strong>RevealJS</strong> and published via <strong>GitHub Pages</strong>.</p>
-        <p class="fragment fade-in">Contact: <strong>24ds3000105@ds.study.iitm.ac.in</strong></p>
+        <h2 class="fragment fade-in-then-out">Thank You</h2>
+        <p class="fragment fade-in-then-semi-out">Slides built with <strong>RevealJS</strong> and published via <strong>GitHub Pages</strong>.</p>
+        <p class="fragment highlight-green">Contact: <strong>24ds3000105@ds.study.iitm.ac.in</strong></p>
         <aside class="notes">
           Invite questions; point to the repo README for data notes.
         </aside>
