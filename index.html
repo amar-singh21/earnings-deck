@@ -43,6 +43,7 @@
           <li class="fragment fade-in">Interactive Chart</li>
           <li class="fragment fade-in">Q&A</li>
         </ol>
+        <aside class="notes">Walk the audience through the flow of the presentation.</aside>
       </section>
 
       <!-- Markdown -->
@@ -63,6 +64,7 @@
 
 Email for queries: **24ds3000105@ds.study.iitm.ac.in**
         </textarea>
+        <aside class="notes">Emphasize key financial KPIs to set the tone.</aside>
       </section>
 
       <!-- Code sample -->
@@ -75,6 +77,7 @@ def gross_margin(revenue, cogs):
     return (revenue - cogs) / revenue
 
 print(round(gross_margin('3200000000', '2320000000') * 100, 2))  # 27.5%</code></pre>
+        <aside class="notes">Show how finance formulas can be validated programmatically.</aside>
       </section>
 
       <!-- Financial formulas -->
@@ -84,13 +87,14 @@ print(round(gross_margin('3200000000', '2320000000') * 100, 2))  # 27.5%</code><
         <p class="fragment fade-up">\[ \\mathrm{NPV} = \\sum_{t=1}^{T} \\frac{CF_t}{(1+r)^t} - C_0 \]</p>
         <p class="fragment fade-in">Capital Asset Pricing Model (CAPM):</p>
         <p class="fragment fade-up">\[ \\mathbb{E}[R_i] = R_f + \\beta_i (\\mathbb{E}[R_m]-R_f) \]</p>
+        <aside class="notes">Illustrate the finance background supporting KPIs.</aside>
       </section>
 
       <!-- Interactive chart (D3.js) -->
       <section>
         <h3>Interactive Revenue Growth</h3>
         <div id="chart" class="fragment fade-in"></div>
-        <aside class="notes">Demo of embedding D3.js charts.</aside>
+        <aside class="notes">Demo of embedding D3.js charts for revenue growth.</aside>
       </section>
 
       <!-- Animation Demo Slide -->
@@ -102,6 +106,7 @@ print(round(gross_margin('3200000000', '2320000000') * 100, 2))  # 27.5%</code><
         <p class="fragment fade-left">Fourth point slides left</p>
         <p class="fragment grow">Fifth point grows</p>
         <p class="fragment shrink">Sixth point shrinks</p>
+        <aside class="notes">Showcase different fragment animations available in RevealJS.</aside>
       </section>
 
       <!-- Guidance -->
@@ -114,6 +119,7 @@ print(round(gross_margin('3200000000', '2320000000') * 100, 2))  # 27.5%</code><
         </ul>
         <p class="footnote fragment fade-in">(Internal model updated Aug 17, 2025)</p>
         <p class="fragment fade-in">Email: <strong>24ds3000105@ds.study.iitm.ac.in</strong></p>
+        <aside class="notes">Provide forward-looking guidance with caution.</aside>
       </section>
 
       <!-- Closing -->
@@ -121,6 +127,7 @@ print(round(gross_margin('3200000000', '2320000000') * 100, 2))  # 27.5%</code><
         <h2 class="fragment fade-in-then-out">Thank You</h2>
         <p class="fragment fade-in-then-semi-out">Slides built with <strong>RevealJS</strong>, interactive D3.js, and published via <strong>GitHub Pages</strong>.</p>
         <p class="fragment highlight-green">Contact: <strong>24ds3000105@ds.study.iitm.ac.in</strong></p>
+        <aside class="notes">Invite final questions and wrap up presentation.</aside>
       </section>
 
     </div>
@@ -163,7 +170,8 @@ print(round(gross_margin('3200000000', '2320000000') * 100, 2))  # 27.5%</code><
       .attr("y", d=>y(d))
       .attr("width", x.bandwidth())
       .attr("height", d=>height - y(d))
-      .attr("fill", "#1f77b4");
+      .attr("fill", "#1f77b4")
+      .attr("class", "fragment fade-in");
 
     svg.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x));
     svg.append("g").call(d3.axisLeft(y));
