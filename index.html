@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quarterly Earnings – Interactive RevealJS Deck</title>
+
+  <!-- Reveal.js core CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css" />
+  <!-- Theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/league.css" id="theme" />
+  <!-- KaTeX for math -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <style>
+    .brand { font-weight: 700; letter-spacing: 0.4px; }
+    .footnote { font-size: 0.6em; opacity: 0.8; }
+    .pill { display:inline-block; padding: .25em .6em; border-radius: 9999px; background:#111827; color:#fff; font-size:.55em; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Title -->
+      <section>
+        <h2 class="brand">Q2 FY2025 Quarterly Earnings</h2>
+        <p>Interactive Report for Stakeholders</p>
+        <p><span class="pill">Technical Consultant</span></p>
+        <p>Email: <strong>24ds3000105@ds.study.iitm.ac.in</strong></p>
+        <aside class="notes">
+          Welcome the audience, mention that this deck is built with RevealJS and will be shared via GitHub Pages. Use left/right arrows to navigate; press <kbd>s</kbd> for speaker view.
+        </aside>
+      </section>
+
+      <!-- Agenda with fragments (animated elements) -->
+      <section>
+        <h3>Agenda</h3>
+        <ol>
+          <li class="fragment fade-in">Headline Financials</li>
+          <li class="fragment fade-in">Revenue & Margin Drivers</li>
+          <li class="fragment fade-in">Outlook & Guidance</li>
+          <li class="fragment fade-in">Q&A</li>
+        </ol>
+        <aside class="notes">
+          Reveal each agenda item using fragments to pace the talk. Keep this slide to ~30 seconds.
+        </aside>
+      </section>
+
+      <!-- Markdown slide -->
+      <section data-markdown>
+        <textarea data-template>
+### Headline Financials (Markdown)
+
+- **Revenue:** $3.2B *(+8% YoY)*
+- **Operating Margin:** 27.4%
+- **EPS (Diluted):** $1.42
+- **Free Cash Flow:** $620M
+
+> Markdown lets us write content quickly while keeping slides clean.
+
+| Metric | Value | Trend |
+|---|---:|:---|
+| ARR | $9.8B | ↗ steady |
+| NRR | 115% | ↗ |
+| Churn | 3.1% | ↘ |
+        </textarea>
+        <aside class="notes">
+          Point out that this slide is authored in Markdown. The table shows sticky metrics relevant for investors.
+        </aside>
+      </section>
+
+      <!-- Code sample with syntax highlighting -->
+      <section>
+        <h3>Programmatic KPI Check (Code Sample)</h3>
+        <pre><code class="language-python">from decimal import Decimal
+
+def gross_margin(revenue, cogs):
+    revenue, cogs = Decimal(revenue), Decimal(cogs)
+    return (revenue - cogs) / revenue
+
+print(round(gross_margin('3200000000', '2320000000') * 100, 2))  # 27.5%</code></pre>
+        <aside class="notes">
+          Highlight that we can embed code with syntax highlighting to show reproducible analytics.
+        </aside>
+      </section>
+
+      <!-- Financial math (KaTeX/MathJax) -->
+      <section>
+        <h3>Financial Formulas</h3>
+        <p>Net Present Value (NPV):</p>
+        <p>\[ \mathrm{NPV} = \sum_{t=1}^{T} \frac{CF_t}{(1+r)^t} - C_0 \]</p>
+        <p>Capital Asset Pricing Model (CAPM):</p>
+        <p>\[ \mathbb{E}[R_i] = R_f + \beta_i (\mathbb{E}[R_m]-R_f) \]</p>
+        <aside class="notes">
+          Briefly remind the audience how discount rates and beta feed valuation and hurdle analysis.
+        </aside>
+      </section>
+
+      <!-- Fragments progression example -->
+      <section>
+        <h3>Key Drivers</h3>
+        <ul>
+          <li class="fragment fade-up">Payments volume growth in APAC</li>
+          <li class="fragment fade-up">Expense discipline in cloud spend</li>
+          <li class="fragment fade-up">Mix shift to higher-margin services</li>
+        </ul>
+        <aside class="notes">
+          Land each driver with a short example; keep each beat &lt;10s.
+        </aside>
+      </section>
+
+      <!-- Speaker notes demo on a detail slide -->
+      <section>
+        <h3>Guidance (Q3 FY2025)</h3>
+        <ul>
+          <li>Revenue growth: 6–8%</li>
+          <li>Operating margin: 26–28%</li>
+          <li>FCF conversion: &gt;95%</li>
+        </ul>
+        <p class="footnote">(Internal model updated Aug 17, 2025)</p>
+        <aside class="notes">
+          De-risk by flagging macro sensitivities (rates, FX). Emphasize disciplined capital allocation.
+        </aside>
+      </section>
+
+      <!-- Closing -->
+      <section>
+        <h2>Thank You</h2>
+        <p>Slides built with <strong>RevealJS</strong> and published via <strong>GitHub Pages</strong>.</p>
+        <p>Contact: <strong>24ds3000105@ds.study.iitm.ac.in</strong></p>
+        <aside class="notes">
+          Invite questions; point to the repo README for data notes.
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js core JS -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+  <!-- Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
+
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      transition: 'slide',
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ],
+      // Math configuration (KaTeX)
+      math: {
+        mathjax: null,
+        katexScript: 'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js',
+        katexStylesheet: 'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css'
+      }
+    });
+  </script>
+</body>
+</html>
