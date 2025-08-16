@@ -68,7 +68,7 @@ Email for queries: **24ds3000105@ds.study.iitm.ac.in**
       <!-- Code sample -->
       <section>
         <h3 class="fragment fade-in">Programmatic KPI Check (Code Sample)</h3>
-        <pre class="fragment fade-in"><code class="language-python">from decimal import Decimal
+        <pre><code class="language-python fragment fade-in">from decimal import Decimal
 
 def gross_margin(revenue, cogs):
     revenue, cogs = Decimal(revenue), Decimal(cogs)
@@ -81,16 +81,27 @@ print(round(gross_margin('3200000000', '2320000000') * 100, 2))  # 27.5%</code><
       <section>
         <h3>Financial Formulas</h3>
         <p class="fragment fade-in">Net Present Value (NPV):</p>
-        <p class="fragment fade-up">\[ \mathrm{NPV} = \sum_{t=1}^{T} \frac{CF_t}{(1+r)^t} - C_0 \]</p>
+        <p class="fragment fade-up">\[ \\mathrm{NPV} = \\sum_{t=1}^{T} \\frac{CF_t}{(1+r)^t} - C_0 \]</p>
         <p class="fragment fade-in">Capital Asset Pricing Model (CAPM):</p>
-        <p class="fragment fade-up">\[ \mathbb{E}[R_i] = R_f + \beta_i (\mathbb{E}[R_m]-R_f) \]</p>
+        <p class="fragment fade-up">\[ \\mathbb{E}[R_i] = R_f + \\beta_i (\\mathbb{E}[R_m]-R_f) \]</p>
       </section>
 
       <!-- Interactive chart (D3.js) -->
       <section>
         <h3>Interactive Revenue Growth</h3>
-        <div id="chart"></div>
+        <div id="chart" class="fragment fade-in"></div>
         <aside class="notes">Demo of embedding D3.js charts.</aside>
+      </section>
+
+      <!-- Animation Demo Slide -->
+      <section>
+        <h3>Animation Demo</h3>
+        <p class="fragment fade-in">First point appears</p>
+        <p class="fragment fade-up">Second point slides up</p>
+        <p class="fragment fade-right">Third point slides right</p>
+        <p class="fragment fade-left">Fourth point slides left</p>
+        <p class="fragment grow">Fifth point grows</p>
+        <p class="fragment shrink">Sixth point shrinks</p>
       </section>
 
       <!-- Guidance -->
