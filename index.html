@@ -23,10 +23,10 @@
 
       <!-- Title -->
       <section>
-        <h2 class="brand">Q2 FY2025 Quarterly Earnings</h2>
-        <p>Interactive Report for Stakeholders</p>
-        <p><span class="pill">Technical Consultant</span></p>
-        <p>Email: <strong>24ds3000105@ds.study.iitm.ac.in</strong></p>
+        <h2 class="brand fragment fade-in">Q2 FY2025 Quarterly Earnings</h2>
+        <p class="fragment fade-in">Interactive Report for Stakeholders</p>
+        <p class="fragment fade-in"><span class="pill">Technical Consultant</span></p>
+        <p class="fragment fade-in">Email: <strong>24ds3000105@ds.study.iitm.ac.in</strong></p>
         <aside class="notes">
           Welcome the audience, mention that this deck is built with RevealJS and will be shared via GitHub Pages. Use left/right arrows to navigate; press <kbd>s</kbd> for speaker view.
         </aside>
@@ -51,12 +51,12 @@
         <textarea data-template>
 ### Headline Financials (Markdown)
 
-- **Revenue:** $3.2B *(+8% YoY)*
-- **Operating Margin:** 27.4%
-- **EPS (Diluted):** $1.42
-- **Free Cash Flow:** $620M
+- **Revenue:** $3.2B *(+8% YoY)* {.fragment}
+- **Operating Margin:** 27.4% {.fragment}
+- **EPS (Diluted):** $1.42 {.fragment}
+- **Free Cash Flow:** $620M {.fragment}
 
-> Markdown lets us write content quickly while keeping slides clean.
+> Markdown lets us write content quickly while keeping slides clean. {.fragment}
 
 | Metric | Value | Trend |
 |---|---:|:---|
@@ -81,6 +81,7 @@ def gross_margin(revenue, cogs):
     return (revenue - cogs) / revenue
 
 print(round(gross_margin('3200000000', '2320000000') * 100, 2))  # 27.5%</code></pre>
+        <p class="fragment fade-in">Email for queries: <strong>24ds3000105@ds.study.iitm.ac.in</strong></p>
         <aside class="notes">
           Highlight that we can embed code with syntax highlighting to show reproducible analytics.
         </aside>
@@ -89,10 +90,10 @@ print(round(gross_margin('3200000000', '2320000000') * 100, 2))  # 27.5%</code><
       <!-- Financial math (KaTeX/MathJax) -->
       <section>
         <h3>Financial Formulas</h3>
-        <p>Net Present Value (NPV):</p>
-        <p>\[ \mathrm{NPV} = \sum_{t=1}^{T} \frac{CF_t}{(1+r)^t} - C_0 \]</p>
-        <p>Capital Asset Pricing Model (CAPM):</p>
-        <p>\[ \mathbb{E}[R_i] = R_f + \beta_i (\mathbb{E}[R_m]-R_f) \]</p>
+        <p class="fragment fade-in">Net Present Value (NPV):</p>
+        <p class="fragment fade-in">\[ \mathrm{NPV} = \sum_{t=1}^{T} \frac{CF_t}{(1+r)^t} - C_0 \]</p>
+        <p class="fragment fade-in">Capital Asset Pricing Model (CAPM):</p>
+        <p class="fragment fade-in">\[ \mathbb{E}[R_i] = R_f + \beta_i (\mathbb{E}[R_m]-R_f) \]</p>
         <aside class="notes">
           Briefly remind the audience how discount rates and beta feed valuation and hurdle analysis.
         </aside>
@@ -115,12 +116,12 @@ print(round(gross_margin('3200000000', '2320000000') * 100, 2))  # 27.5%</code><
       <section>
         <h3>Guidance (Q3 FY2025)</h3>
         <ul>
-          <li>Revenue growth: 6–8%</li>
-          <li>Operating margin: 26–28%</li>
-          <li>FCF conversion: &gt;95%</li>
+          <li class="fragment fade-in">Revenue growth: 6–8%</li>
+          <li class="fragment fade-in">Operating margin: 26–28%</li>
+          <li class="fragment fade-in">FCF conversion: &gt;95%</li>
         </ul>
-        <p class="footnote">(Internal model updated Aug 17, 2025)</p>
-        <p>Email: <strong>24ds3000105@ds.study.iitm.ac.in</strong></p>
+        <p class="footnote fragment fade-in">(Internal model updated Aug 17, 2025)</p>
+        <p class="fragment fade-in">Email: <strong>24ds3000105@ds.study.iitm.ac.in</strong></p>
         <aside class="notes">
           De-risk by flagging macro sensitivities (rates, FX). Emphasize disciplined capital allocation.
         </aside>
@@ -128,9 +129,9 @@ print(round(gross_margin('3200000000', '2320000000') * 100, 2))  # 27.5%</code><
 
       <!-- Closing -->
       <section>
-        <h2>Thank You</h2>
-        <p>Slides built with <strong>RevealJS</strong> and published via <strong>GitHub Pages</strong>.</p>
-        <p>Contact: <strong>24ds3000105@ds.study.iitm.ac.in</strong></p>
+        <h2 class="fragment fade-in">Thank You</h2>
+        <p class="fragment fade-in">Slides built with <strong>RevealJS</strong> and published via <strong>GitHub Pages</strong>.</p>
+        <p class="fragment fade-in">Contact: <strong>24ds3000105@ds.study.iitm.ac.in</strong></p>
         <aside class="notes">
           Invite questions; point to the repo README for data notes.
         </aside>
@@ -163,4 +164,3 @@ print(round(gross_margin('3200000000', '2320000000') * 100, 2))  # 27.5%</code><
   </script>
 </body>
 </html>
-
